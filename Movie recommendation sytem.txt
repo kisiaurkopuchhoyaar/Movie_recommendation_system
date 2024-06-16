@@ -1,0 +1,110 @@
+Introduction: The purpose of this project is to develop a content-based movie recommender system using a dataset from Rotten Tomatoes. The recommender system aims to provide movie recommendations to users based on the similarity of movie features such as ratings, genres, and release dates.
+
+Project Objectives:
+
+Preprocess the dataset to handle missing values, duplicates, and transform data if necessary.
+Extract relevant features from the dataset, including textual features using TF-IDF.
+Calculate similarity between movies based on their features, using cosine similarity.
+Perform exploratory data analysis to gain insights about the movie dataset and identify key features.
+Build a content-based movie recommender system using the calculated similarities.
+Progress Overview:
+
+Dataset has been loaded into the Python environment using the pandas library.
+The structure and contents of the dataset have been explored, including checking columns, data types, missing values, and the number of rows and columns.
+Data cleaning and preprocessing steps have been performed, including handling missing values and removing duplicates.
+The TF-IDF technique has been used to extract textual features from the dataset.
+Similarity calculation using cosine similarity is pending.
+The exploratory data analysis step is pending.
+Next Steps:
+
+Perform similarity calculation between movies based on their features, using cosine similarity.
+Conduct exploratory data analysis to gain insights about the movie dataset, including analyzing movie ratings, genres, and release dates.
+Generate insights that can be used to build a content-based movie recommender system.
+Implement the content-based movie recommender system using the calculated similarities.
+Evaluate the performance of the recommender system and make any necessary improvements.
+Challenges Faced:
+
+Handling missing values and duplicates in the dataset.
+Extracting relevant features from the dataset, including textual features using TF-IDF.
+Ensuring the accuracy and effectiveness of the content-based movie recommender system.
+Conclusion: The project has made progress in loading and preprocessing the dataset, as well as extracting textual features using TF-IDF. The next steps involve performing similarity calculation, conducting exploratory data analysis, generating insights, and implementing the content-based movie recommender system. Challenges faced include handling missing values and duplicates, as well as ensuring the accuracy and effectiveness of the recommender system. Further work is required to complete the project successfully.
+
+Machine learning is an area of research that focuses on comprehending and developing
+techniques that use data to improve performance on a variety of tasks without explicitly
+following instructions. These techniques use algorithms and statistical models to analyze
+the data and identify trends and patterns. In many facets of computing, machine learning
+is commonly used to streamline and better facilitate operations. One machine learning
+method uses a recommender system, where a large number of algorithms work together
+to extract features from a large amount of data and create meaning from it. This ensures
+that the results produced are closely related to the data for which they were generated,
+ensuring that the model generates and maintains good accuracy. Contrary to that, it should
+not be maintained with the currently in use method, but rather, it should be continuously
+466 D. P. Kumar et al.
+upgraded by experimenting with new algorithms and comparing it to other algorithms
+for efficacy.
+Here, in our model, we have used multiple algorithms to construct the model which
+includes NLP (Natural Language Processing) algorithms and distance algorithms i.e.,
+Count Vectorizer, Porter Stemmer, and Cosine Similarity.
+3.1 Count Vectorizer
+It is a utility made available by the Python sci-kit-learn module. Natural Language
+Processing (NLP) and Text Analytics both employ the common feature extraction method
+known as the Count Vectorizer. It’s a quick and easy method of turning a group of text
+documents into numerical feature vectors, where each dimension reflects the quantity
+(or count) of a certain word or token used in the document.
+The Count Vectorizer algorithm operates as follows:
+Text preprocessing: Cleaning and preparing the text data is the first stage in the
+text preprocessing process. To do this, all characters must be changed to lowercase,
+punctuation must be eliminated, and words must be stemmed or lemmatized to return
+them to their original form.
+Tokenization: The text must then be separated into individual words or tokens, which
+can be accomplished using strategies like word or character tokenization. Building the
+vocabulary: Following that, the algorithm creates a vocabulary out of all the distinct
+words or tokens in the text input. A list of every word that appears in the book, coupled
+with an individual index for each term, makes up the vocabulary.
+Encoding the documents: The next stage is to turn each written document into a
+numerical feature vector after the vocabulary has been established. This is accomplished
+by calculating the frequency of each word in each document’s vocabulary and setting
+the frequency as the value of the relevant dimension in the feature vector.
+Normalization: Using methods like TF-IDF (Term Frequency-Inverse Document
+Frequency), which gives uncommon words a greater weight and frequent words a lower
+weight, the counts may be normalized to avoid high-frequency terms from predominating
+the feature vectors.
+Return the feature matrix: The feature vectors for all the text documents are then
+integrated into a single feature matrix, where each row corresponds to a text document and each column to a word in the vocabulary. To represent text data as numerical
+characteristics that can be utilized as input to machine learning algorithms, Count Vectorizer is frequently used in NLP applications such as sentiment analysis, document
+categorization, topic modeling, and more.
+3.2 Porter Stemmer
+The Porter-Stemmer method is employed in natural language processing for text normalization and word reduction. The Porter-Stemmer algorithm’s major objective is to
+break down words into their stem, which facilitates word analysis and comparison. The
+Porter-Stemmer method eliminates affixes like prefixes and suffixes by applying several
+heuristics or rules to the ends of words. The word “running,” for instance, would be
+Content Based Recommendation System on Movies 467
+reduced to its stem, “run,” via the Porter Stemmer algorithm. The “-ing” suffix and any
+additional affixes that can be eliminated based on the established guidelines are deleted
+to do this. To simplify words while maintaining their semantic meaning, the algorithm
+applies the rules in a certain sequence.
+In NLP applications including document categorization, sentiment analysis, and text
+summarization, the Porter-Stemmer method is frequently employed. The technique can
+aid in lowering the dimensionality of the text data by breaking down words into their
+most basic forms, making them simpler to process and analyze. Furthermore, stemming
+can enhance the effectiveness of machine learning algorithms by lowering the number
+of unique words and data variance.
+3.3 Cosine Similarity
+A measure of similarity between two non-zero vectors in an inner product space is
+called cosine similarity. The quantitative comparison of two texts or collections of texts
+is frequently done in information retrieval (IR) and natural language processing (NLP).
+Measurement of the cosine of the angle between two vectors is the fundamental concept
+behind cosine similarity. The cosine value ranges from -1 to 1, with 1 denoting perfect
+similarity and -1 denoting complete dissimilarity.
+The following is the formula for the cosine similarity between two vectors A and B:
+cos() = (A * B)/(||A|| * ||B||)where A and B are the vectors under comparison, ||A|| and
+||B|| are the vector magnitudes, and “*” denotes the vectors’ dot product.
+The process by which cosine similarity operates is to first transform text data into
+numerical vectors, each of whose dimensions indicates the count or frequency of a
+particular word in the source material. The cosine of the angle between the vectors is
+then calculated by comparing them. The two vectors are more similar when the cosine
+value is higher, and more different when the cosine value is lower.
+Cosine similarity is used in NLP and IR applications to compare the similarity
+between two documents by contrasting the vectors that describe the texts. As an illustration, given two documents D1 and D2, we may generate vectors for each one based on
+the frequency of terms in each document, and then use cosine similarity to assess how
+similar the two vectors are to one another
